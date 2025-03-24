@@ -18,7 +18,7 @@ int main(){
 	for(int i=0;i<n;i++)
 	{
 		found = 0;
-		for(int j=0;j<m-1;j++)
+		for(int j=0;j<m;j++)
 		{
 			if(pages[i] == frames[j])
 			{
@@ -32,11 +32,13 @@ int main(){
 			
 			for(j=0;j< m-1;j++)
 			{
-				frames[j] == frames[j+1];
+				frames[j] = frames[j+1];
 			}
 			frames[m-1] = pages[i];
 		}
 	}
+	printf("%d",pagefault);
+	return 0;
 }
 		
 				
